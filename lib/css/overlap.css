@@ -1,0 +1,35 @@
+#container{
+               width:1200x;
+               height:600px;
+               position:relative;
+}
+#c1{
+               width:252px;
+               height:234px;
+               top:50px;
+               left:50px;
+               position:absolute;
+}
+#c2{
+               width:336px;
+               height:212px;
+               top:150px;
+               left:250px;
+               position:absolute;
+}
+#c3{
+               width:260px;
+               height:234px;
+               top:50px;
+               left:570px;
+               position:absolute;
+}
+.visually-hidden {
+      clip: rect(0.063rem, 0.063rem, 0.063rem, 0.063rem);
+      font-size: 1px;
+      height: .5px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: .5px;
+    }
