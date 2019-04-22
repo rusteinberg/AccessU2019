@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+ 
+               <head>
+                              <meta charset="utf-8">
+ 
+                              <title>Accessible Microsoft Office: Excel 2010/2013/365</title>
+ 
+                              <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+                              <meta name="author" content="Hakim El Hattab">
+ 
+                              <meta name="apple-mobile-web-app-capable" content="yes">
+                              <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ 
+                              <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+ 
+                              <link rel="stylesheet" href="css/reveal.css">
+                              <link rel="stylesheet" href="css/theme/black.css" id="theme">
+ 
+                              <!-- Theme used for syntax highlighting of code -->
+                              <link rel="stylesheet" href="lib/css/zenburn.css">
+                              <link rel="stylesheet" href="lib/css/overlap.css">
+                              <link rel="stylesheet" href="lib/css/modal.css">
+							  <link rel="stylesheet" href="plugin/accessibility/helper.css">
+
+                              <!-- Printing and PDF exports -->
+                              <script>
+								 var link = document.createElement( 'link' );
+								 link.rel = 'stylesheet';
+								 link.type = 'text/css';
+								 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+								 document.getElementsByTagName( 'head' )[0].appendChild( link );
+                              </script>
+							  <script src="lib/js/fullscreen.js"></script>
+ 
+                              <!--[if lt IE 9]>
+                              <script src="lib/js/html5shiv.js"></script>
+                              <![endif]-->
+               </head>
+ 
+               <body>
+ 
+				  <div class="reveal">
+
+					 <!-- Any section element inside of this container is displayed as a slide -->
+					 <div class="slides">
+						<section>
+						   <h1>Accessible Excel 2010/2013/365</h1>          
+						   <span><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></span>
+						   <p>
+							  <small>By <a href="https://www.linkedin.com/in/richard-steinberg-8705785/" target="_blank">Richard Steinberg</a><br>
+							  Accessibility Implementation Lead<br>
+							  Wells Fargo Digital Solutions for Business (DS4B)</small>
+						   </p>
+						   <p style="font-size: 12px;">(To view slides and speaker notes, press S key)</p>
+						</section>
+
+						<section>
+							<div style="display:table; margin: auto; width:100%;">
+								 <div style="display:table-row;">
+										  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+										  <div style="display:table-cell; vertical-align: middle;"><h2>Introductions</h2></div>
+								 </div>
+							</div>
+						   <p>
+								<img src="images/intro.png" alt="A silhouette of a person">
+						   </p>
+						   <aside class="notes">
+						   <p>Get idea of participants' skill level, explain pairing up</p>
+						   </aside>
+						</section>
+								   
+						<section>
+						<div style="display:table;">
+							<div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>Accessibility Considerations</h2></div>
+							</div>
+						</div>
+						<ul>
+						   <li>Keyboard Only</li>
+						   <li>Screen Magnification</li>
+						   <li>Use of Color</li>
+						   <li>Screen Reader Friendly</li>
+						   <li>Cognitive Load</li>
+						</ul>
+						<aside class="notes">
+						<p>Why we're doing what we're doing and who it affects.</p>
+						<ul>
+						   <li>Keyboard only users -- Excel keyboard accessible if it's in the grid.</li>
+						   <li>Screen magnifier users -- People with low vision or blocked vision.</li>
+						   <li>Use of color -- Be aware not everyone sees color the same way. </li>
+						   <li>Screen Reader Friendly -- What is a screen reader? Will spend time making Excel files readable for screen readers.</li>
+						   <li>Cognitive Load -- Simplifying tables and presentation will make the info easier to quickly consume for everyone.</li>
+						</ul>
+						</aside>
+						</section>
+						<section>
+						<div style="display:table;">
+							 <div style="display:table-row;">
+								  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+								  <div style="display:table-cell; vertical-align: middle;"><h2>Can You Spot the Differences?</h2></div>
+							 </div>
+						</div>
+						<p>Links below open files in MS Excel</p>
+						<table>
+							<thead>
+							   <tr>
+								  <th scope="col"><a href="exercises/01-Before.xlsx">File Before Remediation</a></th>
+								  <th scope="col"><a href="exercises/01-After.xlsx">File After Remediation</a>
+							   </tr>
+						</thead>
+						<tbody>
+							   <tr>
+								  <td><img src="images/01-Before.png" height="300" alt="Excel spreadsheet before remediation"></td>
+								  <td><img src="images/01-After.png" height="300" alt="Excel spreadsheet after remediation"></td>
+							   </tr>
+						</tbody>
+						</table>
+			   
+						</section>
+						<section>
+						<h2>Before and After</h2>
+						<div style="position:relative; width:912px; height:596px; margin:0 auto;">
+						  <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/01-Before.png" alt="table before remdiation" style="position:absolute;top:0;left:0;" />
+						  <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/01-After.png" alt="table after remdiation" style="position:absolute;top:0;left:0;" />
+						</div>
+						</section>
+
+						<section id="fragments">
+							<h2>What did you find?</h2>
+							<ul class="fragment">
+								<li style="font-size: 28px;">Unused rows and columns hidden</li>
+								<li style="font-size: 28px;">Shading</li>
+								<li style="font-size: 28px;">Named tabs</li>
+								<li style="font-size: 28px;">Extra worksheet deleted</li>
+								<li style="font-size: 28px;">Merged cells</li>
+								<li style="font-size: 28px;">Wording changed</li>
+								<li style="font-size: 28px;">Spacing changed</li>
+								<li style="font-size: 28px;">Font changed</li>
+								<li style="font-size: 28px;">White text--end of sheet</li>
+								<li style="font-size: 28px;">Zoom level different</li>
+								<li style="font-size: 28px;">Sheet named</li>
+							</ul>
+						</section>
+						<section>
+							<div style="display:table;">
+								 <div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>How do JAWS and ZoomText<br>Announce Before and After?</h2></div>
+								 </div>
+							</div>
+							<p>Open Before and After Excel files with JAWS and ZoomText (one at a time with each assistive technology). What are the differences?</p>
+							<aside class="notes">
+
+							<p>Demo file on ZoomText (Instructor demo)</p>
+							<ul>
+								<li>Go to 4X to F1 cell</li>
+								<li>Look at before and after in ZoomText</li>
+								<li>What do you notice about the fonts?</li>
+								<li>Before is blurry, after is less blurryl</li>
+								<li>Before have to scroll left to right. White space gets in the way</li>
+								<li>After is more succinct and easier to scroll left to right</li>
+								<li>Before Agency Total row is hard to read</li>
+								<li>After Agency Total is easier to read</li>
+							</ul>
+							<p>Demo file on JAWS (Instructor demo)</p>
+							<ul>
+								<li>Go to the top of the file in before, cell A1. JAWS finds a lot of blank cells.</li>
+								<li>After version--there is information right away in A1</li>
+								<li>Note it is OK to have merged cell in non-data cells (at top), but have used centering effect</li>
+								<li>There are cells that are named in name manager (in demo, may take some time for JAWS to load)</li>
+								<li>Note that it is better to have a dash or a zero, not a blank cell</li>
+								<li>Explain how Title gives info to JAWS (first column entries announced as "Capital Projects"</li>
+							</ul>						
+							</aside>
+						</section>
+						<section>
+						<div style="display:table;">
+								 <div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>Spacing and Fonts</h2></div>
+								 </div>
+						</div>
+						<p>Optimize for users who use screen magnification.</p>
+						<div style="position:relative; width:912px; height:596px; margin:0 auto;">
+						  <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/01-Before-zoom.png" alt="table before remediation for screen magnification" style="position:absolute;top:0;left:0;" />
+						  <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/01-After-zoom.png" alt="table after remediation for screen magnification" style="position:absolute;top:0;left:0;" />
+						</div>
+						<aside class="notes">
+						<p>Another consideration is to optimize for screen magnification. Many people with low vision will use a screen magnifier to read documents. And any anyone accessing a document on a phone or tablet will have a limited viewport, as well.</p>
+						<p>When using a limited view port, a user can only see a few cells at a time, and will start at the top and pan left to right. 
+						<p>For example, when this table with a limited viewport, right off, they would see an empty column A, read the titles rows 1 and 2, and then empty rows 3 and 4. That's a lot of blank space to wade through to get to the actual information on this sheet. So it's best to eliminate blank rows and columns in excel. And It's also important to check is that the information makes sense when read left to right top to bottom.</p>
+						<p>Another thing that happens under screen magnification is that fonts begin to pixelate. Therefore it's important to use a sans serif font like Arial or Verdana. Also the font need to be a minimum of size 12.</p>
+						<p>Lastly, you need to use strong contrast to maximize readability.  The headers on this table do not have enough contrast between the background color and the text color. </p>
+						<p>Overall, the original version of this table is pretty difficult for anyone to read. The same table was then optimized for accessibility. </p>
+						<ul>
+							<li>Empty rows and columns were deleted.</li> 
+							<li>The font was changed to Arial and bumped up to size 12.</li>
+							<li>The color contrast was fixed on the headers. </li>
+						</ul>
+						<p>You will probably agree that these changes have made the table much more readable for anyone, not just thse with visual imairments.</p>
+						</aside>
+						</section>
+						<section>
+						<div style="display:table;">
+								 <div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>How to Set the Default Font</h2></div>
+								 </div>
+						</div>
+						<p>
+								<img src="images/defaultfont.png" alt="Excel screen for setting default font">
+						</p>
+						<aside class="notes">
+						<p>Save time by making the fonts in your Microsoft Excel program accessible by default.</p>
+						<p>Just go to File > Options > General > and look for "When Creating New Workbooks..."</p>
+						<p>Choose a sans serif font such as Verdana or Arial and choose font size 12.</p>
+						<p>Also be sure to always set the zoom to 100% or the font won't really be the size you've set them at. And  set first cell at A1 on first worksheet.</p>
+						</aside>
+						</section>
+						<section>
+						<div style="display:table;">
+								 <div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>Intro to Color Blindness</h2></div>
+								 </div>
+						</div>
+						<div style="position:relative; width:912px; height:596px; margin:0 auto;">
+						  <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/colortablebefore.png" alt="table with colored cells before remediation" style="position:absolute;top:0;left:0;" />
+						  <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/colortableafter.png" alt="table with colored cells after remediation" style="position:absolute;top:0;left:0;" />
+						</div>
+						<aside class="notes">
+						<p>When color is included in your spreadsheets, you need to make sure that information is not conveyed with color *alone*. This is because not everyone sees colors the same way, and also not everyone can see. Those who can't see, use screen readers that read the information on the screen aloud. Let's look at an example.</p>
+						<p>Here is a table with a date column that has past due thresholds, indicated by blue and green backgrounds. Presumably there would be a legend that would explain exactly what the blue and green shading mean. The problem is that some users may not be able to distinguish between the blue and green colors; and people who use screen readers would hear the text in the cells but would not be aware of the background colors at all. So this is an example of how using color to convey information can be inaccessible. </p>
+						<p>But... with some small tweaks, this table can be made accessible. For example, you could add a column that *says* what is past threshold – in this table it is either a diagnostic, an assessment, or neither. For those who can distinguish the color shading, it is much more obvious now that blue means (diagnostic) and green means (assessment). And for those who can't rely on color, the information is clearly communicated in text. This table is now accessible.</p> 
+						<p>By the way, watch out for color in charts too. For example, in a pie chart, you can add labels and values next to each wedge so that users who are color blind can have an alternate way to get the information.</p>
+						</aside>
+						</section>
+						<section>
+						<div style="display:table;">
+								 <div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>Pie Chart Examples</h2></div>
+								 </div>
+						</div>
+						<div style="position:relative; width:912px; height:596px; margin:0 auto;">
+						  <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/piechart01.png" style="position:absolute;top:0;left:0;" alt="Color pie chart with key off to right side"/>
+						  <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/piechart02.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with key off to right side"/>
+						</div>						
+						<aside class="notes">
+						<p>Keep in mind that some of your excel-generated charts and graphs may also be used for presentations in small to large groups. Having said that, make sure that associate a number with each bar in your graph along with the name.</p>
+						<p>Checked preloaded palettes for pie charts in Excel 2013 and none pass for accessibility with black or white characters.</p>
+						</aside>
+						</section>
+						
+						<section>
+						<div style="display:table;">
+								 <div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>Pie Chart Examples</h2></div>
+								 </div>
+						</div>						
+						<div style="position:relative; width:912px; height:596px; margin:0 auto;">
+						    <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/piechart03.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with key off to right side and labels and numbers in pie slices"/>
+							 <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/piechart04.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with lines pointing to pie slices with labels and numbers"/>
+						</div>									
+						<aside class="notes">
+						<p>Keep in mind that some of your excel-generated charts and graphs may also be used for presentations in small to large groups. Having said that, make sure that associate a number with each bar in your graph along with the name.</p>
+						<p>Checked preloaded palettes for pie charts in Excel 2013 and none pass for accessibility with black or white characters.</p>
+						</aside>
+						</section>
+						
+						<section>
+						<div style="display:table;">
+								 <div style="display:table-row;">
+									  <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+									  <div style="display:table-cell; vertical-align: middle;"><h2>Pie Chart Examples</h2></div>
+								 </div>
+						</div>						
+						<div style="position:relative; width:912px; height:596px; margin:0 auto;">
+						    <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/piechart05.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with with labels and numbers using white text in pie slidces. Some text fails color contrast."/>
+							 <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/piechart06.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with with labels and numbers using black text in pie slidces. Some text fails color contrast."/>
+						</div>									
+						<aside class="notes">
+						<p>Keep in mind that some of your excel-generated charts and graphs may also be used for presentations in small to large groups. Having said that, make sure that associate a number with each bar in your graph along with the name.</p>
+						<p>Checked preloaded palettes for pie charts in Excel 2013 and none pass for accessibility with black or white characters.</p>
+						</aside>
+						</section>						
+						
+					 </div>
+
+				  </div>
+
+				  <script src="lib/js/head.min.js"></script>
+				  <script src="js/reveal.js"></script>
+
+				  <script>
+
+								 // More info https://github.com/hakimel/reveal.js#configuration
+								 Reveal.initialize({
+												controls: true,
+												progress: true,
+												history: true,
+												center: true,
+
+												transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+												// More info https://github.com/hakimel/reveal.js#dependencies
+												dependencies: [
+															   { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+															   { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+															   { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+															   { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+															   { src: 'plugin/search/search.js', async: true },
+															   { src: 'plugin/zoom-js/zoom.js', async: true },
+															   { src: 'plugin/notes/notes.js', async: true }
+												]
+								 });
+
+				  </script>
+ 
+               </body>
+</html>
