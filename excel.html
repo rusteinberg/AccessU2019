@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Accessible Microsoft Office: Excel 2010/2013/365</title>
+    <title>Accessible Microsoft Office: Excel 2016/365</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -44,7 +44,7 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
-                <h1>Accessible Excel 2010/2013/365</h1>
+                <h1>Accessible Excel 2016/365</h1>
                 <span><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></span>
                 <p>
                     <small>By <a href="https://www.linkedin.com/in/richard-steinberg-8705785/" target="_blank">Richard Steinberg</a><br>
@@ -96,6 +96,29 @@
                     </ul>
                 </aside>
             </section>
+			
+			 <section>
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+                        <div style="display:table-cell; vertical-align: middle;">
+                            <h2>General Tips</h2></div>
+                    </div>
+                </div>
+                <ul>
+                    <li style="font-size: 28px;" class="fragment">Make sure your language is set in Excel properties/complete Metadata</li>
+                    <li style="font-size: 28px;" class="fragment">Make sure sheets have unique names and delete unused sheets</li>
+					<li style="font-size: 28px;" class="fragment">If a sheet has multiple tables, blank row between each. Best practice one table per sheet.</li>
+					<li style="font-size: 28px;" class="fragment">Complex tables can only be made accessible if Excel version converted to PDF or HTML</li>
+                    <li style="font-size: 28px;" class="fragment">Remove comments</li>
+					<li style="font-size: 28px;" class="fragment">Don't embed multimedia</li>
+                    <li style="font-size: 28px;" class="fragment">If your sheet needs instructions, put them in A1 cell</li>
+					<li style="font-size: 28px;" class="fragment">Set zoom level and focus on starting cell for each sheet (usually A1)</li>
+                    <li style="font-size: 28px;" class="fragment">Add alternative text for charts and graphs--more on this later</li>
+                </ul>
+               
+            </section>
+			
             <section>
                 <div style="display:table;">
                     <div style="display:table-row;">
@@ -298,7 +321,7 @@
                 </div>
                 <ul>
                     <li style="font-size: 28px;">When creating a table from scratch, Excel allows you to define table headers.</li>
-                    <li style="font-size: 28px;">This information <span style="color: yellow;">is not communicated</span> to most screen reader users.</li>
+                    <li style="font-size: 28px;">This information <span style="color: yellow;">is not communicated</span> to all screen reader users.</li>
                 </ul>
                 <p>
                     <img src="images/tableheaderbad.png" alt="Inserting table header from Excel insert table menu">
@@ -307,7 +330,7 @@
                     <p>Tables are difficult for screen reader users to navigate whether they appear on a web page, a Word document, a PDF, a PowerPoint, and yes in Excel.</p>
                     <p>The main issue is screen reader users need to be able to associate column and row headers with the cell they are in.</p>
                     <p>It's Ok to have merged cells above data. But if a table has table headers with merged cells, it is difficult if not impossible for screen reader users to know where they are.</p>
-                    <p>Although Excel has a way of defining a top row as a header row, that information is not communicated to JAWS or NVDA.</p>
+                    <p>Although Excel has a way of defining a top row as a header row, that information is not communicated to all screen reader users. Demo on JAWS.</p>
                 </aside>
             </section>
 
@@ -460,6 +483,43 @@
                     <img src="images/multiple-tables.png" alt="Directions on using Name Manager in Excel workbook with multiple tables on multiple sheets. Table 1 can be named Title1, table 2 named Title2, and table 3 named Title3">
                 </p>
             </section>
+			
+			
+			<section>
+                <div style="display:table;">
+                    <div style="display:table-row; ">
+                        <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+                        <div style="display:table-cell; vertical-align: middle;">
+                            <h2>TOC for Multiple Sheets</h2></div>
+                    </div>
+                </div>
+			<div style="position:relative; width:912px; height:596px; margin:0 auto;">
+					<img src="images/01-toc.png" width="640" alt="creating a blank sheet called table of contents" style="position:absolute;top:0;left:0;" >
+					<img class="fragment" src="images/02-toc.png" width="640" alt="entering table of contents entries" style="position:absolute;top:0;left:0;" >
+					<img class="fragment" src="images/03-toc.png" width="922" alt="highlight cell and insert hyperlink with control k" style="position:absolute;top:0;left:0;" >
+					<img class="fragment" src="images/04-toc.png" width="922" alt="Select Place in This Document, then select place from list you created in Name Manager" style="position:absolute;top:0;left:0;" >					
+			</div>
+				<aside class="notes">
+				<ol>
+					<li>Insert a Blank Sheet, call it Table of Contents, and move it to be the first sheet</li>
+					<li>Type out meaningful table of contents entries, format as desired</li>
+					<li>Highlight cell and use Ctrl + K or Insert Hyperlink</li>
+					<li>Select Place in This Document, then select place from list you created in Name Manager</li>
+				</ol>
+				</aside>
+            </section>
+			<section>
+                <div style="display:table;">
+                    <div style="display:table-row; ">
+                        <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100"></div>
+                        <div style="display:table-cell; vertical-align: middle;">
+                            <h2>TOC for Multiple Sheets-Completed</h2></div>
+                    </div>
+                </div>
+			<p><a href="exercises/03-Named-Cells-multiple-TOC.xlsx">Completed Example</a></p>
+			</section>
+			
+			
             <section>
                 <div style="display:table;">
                     <div style="display:table-row;">
@@ -472,7 +532,8 @@
                 </div>
 
                 <div style="position:relative; width:912px; height:596px; margin:0 auto;">
-                    <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/colortablebefore.png" alt="table with colored cells before remediation" style="position:absolute;top:0;left:0;" /> <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/colortableafter.png" alt="table with colored cells after remediation" style="position:absolute;top:0;left:0;" /></div>
+                    <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/colortablebefore.png" alt="table with colored cells before remediation" style="position:absolute;top:0;left:0;" /> 
+					<img class="fragment fade-in" data-fragment-index="0" width="912" src="images/colortableafter.png" alt="table with colored cells after remediation" style="position:absolute;top:0;left:0;" /></div>
                 <aside class="notes">
                     <p>When color is included in your spreadsheets, you need to make sure that information is not conveyed with color alone. This is because not everyone sees colors the same way, and also not everyone can see. Those who can't see, use screen readers that read the information on the screen aloud. Let's look at an example.
                     </p>
@@ -496,7 +557,8 @@
                 </div>
 
                 <div style="position:relative; width:912px; height:596px; margin:0 auto;">
-                    <img class="fragment" width="655" src="images/piechart01.png" style="position:absolute;top:0;left:0;" alt="Color pie chart with key off to right side" /> <img class="fragment" width="655" src="images/piechart02.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with key off to right side" />
+                    <img class="fragment" width="655" src="images/piechart01.png" style="position:absolute;top:0;left:0;" alt="Color pie chart with key off to right side" /> 
+					<img class="fragment" width="655" src="images/piechart02.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with key off to right side" />
                     <img class="fragment" width="655" src="images/piechart03.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with key off to right side and labels and numbers in pie slices" />
                     <img class="fragment" width="655" src="images/piechart04.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with lines pointing to pie slices with labels and numbers" />
                     <img class="fragment" width="655" src="images/piechart05.png" style="position:absolute;top:0;left:0;" alt="Black and white version of same pie chart with with labels and numbers using white text in pie slidces. Some text fails color contrast." />
@@ -504,10 +566,28 @@
                 </div>
                 <aside class="notes">
                     <p>Keep in mind that some of your Excel-generated charts and graphs may also be used for presentations in small to large groups. Having said that, make sure that associate a number with each bar in your graph along with the name.</p>
-
                     <p>Checked preloaded palettes for pie charts in Excel 2013 and none pass for accessibility with black or white characters.</p>
                 </aside>
             </section>
+			
+			 <section>
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100" /></div>
+
+                        <div style="display:table-cell; vertical-align: middle;">
+                            <h2>Checking Colors</h2>
+                        </div>
+                    </div>
+                </div>
+				<ul>
+					<li style="font-size: 28px;">Colour Contrast Analyser: <a href="https://developer.paciellogroup.com/resources/contrastanalyser/" target="_blank">https://developer.paciellogroup.com/resources/contrastanalyser/</a></li>
+					<li style="font-size: 28px;">WebAIM Color Contrast Checker: <a href="https://webaim.org/resources/contrastchecker/" target="_blank">https://webaim.org/resources/contrastchecker/</a></li>
+					<li style="font-size: 28px;">LevelAccess RGB Color Contrast Checker: <a href="https://www.levelaccess.com/color-contrast-checker/ target="_blank">https://www.levelaccess.com/color-contrast-checker/</a></li>
+					<li style="font-size: 28px;">SBF Color Contrast Checker / Analyzer (RGB and Hex): <a href="https://www.sbwfc.co.kr/ColorChecker/" target="_blank">https://www.sbwfc.co.kr/ColorChecker/</a></li>
+					<li style="font-size: 28px;">Hex to RGB Converter (or similar): <a href="https://www.rapidtables.com/convert/color/hex-to-rgb.html" target="_blank">https://www.rapidtables.com/convert/color/hex-to-rgb.html</a></li>
+				</ul>
+			</section>
             <section>
                 <div style="display:table;">
                     <div style="display:table-row;">
@@ -559,7 +639,35 @@
                 <div style="position:relative; width:912px; height:596px; margin:0 auto;">
                     <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/04-Before-3.png" alt="table before remediation" style="position:absolute;top:0;left:0;" /> <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/04-After-3.png" alt="table after remediation" style="position:absolute;top:0;left:0;" /></div>
             </section>
+			
+			 <section>
+			 <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100" /></div>
 
+                        <div style="display:table-cell; vertical-align: middle;">
+                            <h2>References</h2>
+                        </div>
+                    </div>
+                </div>
+				<ul>
+					<li><a href="exercises/Accessible-Excel-Checklist.docx">Accessible-Excel-Checklist.docx</a></li>
+					<li><a href="exercises/Accessible-Excel-User-Guide.docx">Accessible-Excel-User-Guide.docx</a></li>
+				</ul>
+            </section>
+			
+			<section>
+			<div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100" /></div>
+
+                        <div style="display:table-cell; vertical-align: middle;">
+                            <h2>Accessible Excel 2016/365</h2>
+                        </div>
+                    </div>
+                </div>
+                <h3>Thank you!</h3>
+			</section>
         </div>
 
     </div>
