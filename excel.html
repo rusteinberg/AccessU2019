@@ -543,6 +543,8 @@
                     <p>But... with some small tweaks, this table can be made accessible. For example, you could add a column that *says* what is past threshold &#8211; in this table it is either a diagnostic, an assessment, or neither. For those who can distinguish the color shading, it is much more obvious now that blue means (diagnostic) and green means (assessment). And for those who can't rely on color, the information is clearly communicated in text. This table is now accessible.</p>
 
                     <p>By the way, watch out for color in charts too. For example, in a pie chart, you can add labels and values next to each wedge so that users who are color blind can have an alternate way to get the information.</p>
+					
+					<p>The default settings of the Chart Wizard in Excel are not color accessible. Use the formatting tools to change line styles and colors. </p>
                 </aside>
             </section>
             <section>
@@ -594,13 +596,11 @@
                         <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100" /></div>
 
                         <div style="display:table-cell; vertical-align: middle;">
-                            <h2>Working with Charts</h2>
+                            <h2>Working with Charts and Alt Text</h2>
                         </div>
                     </div>
                 </div>
-
                 <p><small>Links below open files in MS Excel</small></p>
-
                 <table>
                     <thead>
                         <tr>
@@ -611,15 +611,27 @@
 								Remediation</small></a></th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr>
-                            <td><img src="images/04-Before-1.png" height="300" alt="Excel spreadsheet with charts before remediation" /></td>
+                            <td><img src="images/04-Before-1.png" height="200" alt="Excel spreadsheet with charts before remediation" /></td>
 
-                            <td><img src="images/04-After-1.png" height="300" alt="Excel spreadsheet with charts after remediation" /></td>
+                            <td><img src="images/04-After-1.png" height="200" alt="Excel spreadsheet with charts after remediation" /></td>
                         </tr>
                     </tbody>
                 </table>
+				<p><small><a href="https://support.office.com/en-ie/article/make-your-excel-documents-accessible-to-people-with-disabilities-6cc05fc5-1314-48b5-8eb3-683e49b3e593#bkmk_addalttextimage_o365_win" target="_blank">Microsoft guide to writing alt text for  Excel</a></small></p>
+				<aside class="notes">
+				<ul>
+				<li>All charts need something called Alt Text. This is a text description of what the chart is about.</li>
+				<li>Type 1-2 sentences in the text box to describe the object and its context to someone who cannot see it.</li>
+				<li>Do not start your alt text with, "This is an image of ..." Screen readers will identify images so it would be redundant to hear "Graphic: This is an image of..."</li>
+				<li>Microsoft has recently updated Office 2016 to make writing alt text easier. Right click on the chart and select "Edit Alt Text"</li>
+				<li>If your organization has not updated Office 2016 yet, right click on the chart, select Format Chart Area or Format Picture, select the Size and Properties icon (far right), then select Alt Text. Leave Title blank</li>
+				<li>Office 365 has an auto alt text generator that uses artificial intelligence to describe your picture. To turn it off: Select File > Options > Ease of Access. In the Automatic Alt Text section, select or unselect the Automatically generate alt text for me option, and then select OK.</li>
+				<li>In addition, if your artwork is decorative, in Office 365 and Office 2019 you can mark it as decorative.</li>
+				<li>If it is decorative in Office 2016, type a pair of quotation marks ("") or a space in the alt text field</li>
+				</ul>
+				</aside>
             </section>
             <section>
                 <h2>Before and After Chart 1</h2>
@@ -639,7 +651,29 @@
                 <div style="position:relative; width:912px; height:596px; margin:0 auto;">
                     <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/04-Before-3.png" alt="table before remediation" style="position:absolute;top:0;left:0;" /> <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/04-After-3.png" alt="table after remediation" style="position:absolute;top:0;left:0;" /></div>
             </section>
-			
+			<section>
+			 <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; vertical-align: middle;"><img src="images/excel.png" alt="" aria-hidden="true" width="100" height="100" /></div>
+
+                        <div style="display:table-cell; vertical-align: middle;">
+                            <h2>Bonus Tip: Form Fields</h2>
+                        </div>
+                    </div>
+                </div>
+				<ul>
+					<li style="font-size: 28px;">Add borders for low vision users</li>
+					<li style="font-size: 28px;">Add light shading for all users</li>
+					<li style="font-size: 28px;">Add tooltips for cells where information needs to be entered
+						<ul>
+							<li>Go to Data Tab and select Data Visualization, then Data Visualization</li>
+							<li>Enter a brief message to announce to screen reader users</li>
+							<li>All users will see the input message on hover</li>
+						</ul>
+					</li>
+					<li style="font-size: 28px;"><a href="exercises/MyForm.xlsx">Example form, MyForm.xlsx</a></li>
+				</ul>
+			</section>			
 			 <section>
 			 <div style="display:table;">
                     <div style="display:table-row;">
