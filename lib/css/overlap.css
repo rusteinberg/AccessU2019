@@ -24,6 +24,9 @@
                left:570px;
                position:absolute;
 }
+a:link {
+  text-decoration: underline;
+}
 .visually-hidden {
       clip: rect(0.063rem, 0.063rem, 0.063rem, 0.063rem);
       font-size: 1px;
