@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>A Framework for a Better Framework</title>
+    <title>A Framework for Building a Better Framework</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -42,7 +42,7 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
-                <h1>A Framework for a Better Framework</h1>
+                <h1>A Framework for Building a Better Framework</h1>
                 <p>
                     <small>By <a href="https://www.linkedin.com/in/richard-steinberg-8705785/" target="_blank">Richard Steinberg</a><br>
 																  Accessibility Implementation Lead<br>
@@ -66,7 +66,7 @@
 				</section>
 
             <section>
-                <h2>Why Framework?</h2>
+                <h2>Why a Framework?</h2>
                 <div style="display:table;">
                     <div style="display:table-row;">
                         <div style="display:table-cell;">
@@ -331,8 +331,6 @@
 				</div>
             </section>
 			
-			
-			
             <section>
                 <h2>Building Your Design System</h2>
                 <div style="display:table; width:1000px; vertical-align: top;">
@@ -492,37 +490,7 @@
                     <p>Headers, navigation elements, and footers are common components.</p>
                 </aside>
             </section>
-            <section>
-                <h2>Behold the Button!</h2>
-                <p>
-                    <img src="images/button.png" alt="Anatomy of button design includes color, margin, padding, bordder, font, and shadow">
-                </p>
-                <aside class="notes">
-                    <p>The button is one of the most basic forms of user interface.. Buttons help us navigate, but also set a stylistic tone. Like most screen elements, each button contains a large amount of detail in its specification</p>
-                    <p>And each button usually has several different states as well as different functionalities and hierarchies</p>
-                    <p>Multiply all of these detailed specifications for all of our parts on all of our screens -- and things can get a little complicated</p>
-                </aside>
-            </section>
-
-            <section>
-                <h2>Button States</h2>
-                <p>
-                    <img src="images/buttonstates.png" alt="Button states include default, focus, pressed, hover, disabled, and progress indicator">
-                </p>
-                <aside class="notes">
-                    <p>Button states include Active/Enabled, Hover, Focus, Pressed, and Disabled</p>
-                </aside>
-            </section>
-
-            <section>
-                <h2>Button Hierarchies</h2>
-                <p>
-                    <img src="images/buttonhierarchies.png" alt="Button hierachies include basic, menu, split, icon, and group, as well as types such as primary and secondary">
-                </p>
-                <aside class="notes">
-                    <p>Example of button hierarchies</p>
-                </aside>
-            </section>
+           
 
             <section>
                 <h2>Assembling Your UX Team</h2>
@@ -592,6 +560,145 @@
                     </ul>
                 </aside>
             </section>
+			<section>
+				<h2>Sample Specs: Button</h2>
+				<h3>Business Need</h3>
+				<ul>
+					<li style="font-size: 28px;">Buttons are needed to trigger actions. Buttons express what action will occur when the user selects it. Buttons are used to initialize an action, either in the background or foreground of an experience.</li>
+					<li style="font-size: 28px;">Buttons are also used to expand/ collapse content, display dialogs, or perform a search/ filter.</li>
+					<li style="font-size: 28px;">Buttons should not be used to perform navigation.</li>
+				</ul>
+			</section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Function</h3>
+				<ul>					
+					<li style="font-size: 28px;">Use buttons for the most important actions you want users to take on your site, such as "Download," "Sign Up," "Log Out,"  "Add," "Save," "Delete," and "Sign up."</li>
+					<li style="font-size: 28px;">Each page can have one or two primary buttons. Any remaining calls-to-action should be represented as secondary buttons.</li>
+					<li style="font-size: 28px;">Do not use buttons as navigational elements. Instead, use links when the desired action is to take the user to a new page. Remember that screen readers announce and handle links differently than they do buttons.</li>
+				</ul>
+			</section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Appearance Detail</h3>
+			 <p>
+                    <img src="images/button.png" alt="Anatomy of button design includes color, margin, padding, bordder, font, and shadow">
+                </p>
+                <aside class="notes">
+                    <p>The button is one of the most basic forms of user interface.. Buttons help us initiate an action, but also set a stylistic tone. Like most screen elements, each button contains a large amount of detail in its specification</p>
+                    <p>And each button usually has several different states as well as different functionalities and hierarchies</p>
+                    <p>Multiply all of these detailed specifications for all of our parts on all of our screens -- and things can get a little complicated</p>
+                </aside>
+			</section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+                <h3>Button Hierarchies</h3>
+                <p>
+                    <img src="images/buttonhierarchies.png" alt="Button hierachies include basic, menu, split, icon, and group, as well as types such as primary and secondary">
+                </p>
+                <aside class="notes">
+                    <p>Example of button hierarchies</p>
+                </aside>
+            </section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Appearance States</h3>
+				<p>
+                    <img src="images/buttonstates.png" alt="Button states include default, focus, pressed, hover, disabled, and progress indicator">
+                </p>
+                <aside class="notes">
+                    <p>Button states include Active/Enabled, Hover, Focus, Pressed, and Disabled</p>
+                </aside>
+            </section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Content</h3>
+				<ul>					
+					<li style="font-size: 28px;">Button labels should not wrap</li>
+					<li style="font-size: 28px;">Character limit of 25 characters or no more than 3 words</li>
+					<li style="font-size: 28px;">Use active language (Submit, Continue, Apply, Save, etc.)</li>
+					<li style="font-size: 28px;">Make the first word of the button's label a verb. For example, instead of "Complaint Filing" label the button "File a complaint."</li>
+					<li style="font-size: 28px;">Use sentence case for button labels.</li>
+					<li style="font-size: 28px;">At times, consider adding an icon to signal specific actions ("download", "open in a new window", etc).</li>
+				</ul>
+			</section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Accessibility: Color</h3>
+				<ul>					
+					<li style="font-size: 28px;">When information is conveyed by color, do not use color alone to convey the information.  </li>
+					<li style="font-size: 28px;">Provide enough contrast between text (or a symbol or an icon), and its background so that it can be read by people with low vision. Minimum color contrast should meet Level AA color contrast guidelines of 4.5:1.</li>
+					<li style="font-size: 28px;">Disabled elements and logos are exempt from color contrast criteria.</li>
+				</ul>
+			</section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Accessibility: Keyboard/Focus</h3>
+				<ul>					
+					<li style="font-size: 28px;">When the Button has keyboard focus:
+					<ol>
+						<li style="font-size: 18px;">ENTER/ SPACE will execute the action for that button.</li>
+						<li style="font-size: 18px;">TAB will move focus to the next interactive element after the Button.</li>
+						<li style="font-size: 18px;">SHIFT + TAB will move focus to the previous interactive element before the Button.</li>
+					</ol>
+					</li>
+					<li style="font-size: 28px;">If the button activation closes the containing entity or launches another entity, then focus moves to the newly opened entity.</li>
+					<li style="font-size: 28px;">Disabled buttons should not be focusable.</li>
+				</ul>
+			</section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Accessibility: Code Details</h3>
+				<ul>					
+					<li style="font-size: 28px;">Button component should use a native HTML &lt;button&gt;. Avoid using &lt;div&gt; and &lt;span&gt;</li>
+					<li style="font-size: 28px;">All buttons must have an accessible name that clearly communicates their purpose to screen reader users. Icon only buttons should have aria-label to provide an accessible button name to screen reader users.</li>
+					<li style="font-size: 28px;">Button "type" attribute should be properly set. Valid types include "button", "submit", or "reset".</li>
+					<li style="font-size: 28px;">Toggle buttons should have aria-pressed attribute</li>
+					<li style="font-size: 28px;">For expand/collapse button, use aria-controls to communicate which content the button controls.</li>
+					<li style="font-size: 28px;">Use aria-expanded to communicate the current state for the content it controls.</li>
+				</ul>
+			</section>
+			<section>
+			<h2>Sample Specs: Button</h2>
+				<h3>Accessibility: Example of Expand/Collapse Button</h3>
+				<pre><code class="hljs" data-trim data-line-numbers="4,8-11">
+<script>
+function showhideDiv() {
+  var x = document.getElementById("p2");
+  if (x.style.display === "none") {
+	x.style.display = "block";
+		b2.setAttribute("aria-expanded", 'true');
+		b2.setAttribute("aria-label", 'Show content expanded')
+		state.innerHTML = '<span>-</span>'
+	} else {
+		x.style.display = "none";
+			b2.setAttribute("aria-expanded", 'false');
+			b2.setAttribute("aria-label", 'Show content collapsed')
+			state.innerHTML = '<span>+</span>'
+	}
+}
+</script>
+<style>
+.state:after{
+	content: '+';
+}
+.state.open:after{
+	content: '-';
+}
+</style>
+<p><button id="b2" tabindex="0" aria-expanded="false" aria-label="Show content?" aria-controls="p2" onclick="showhideDiv()"><span id="state">+</span></button> What is the content?</p>
+<div class="p2-content" id="p2" style="display:none;">The quick brown fox jumped over the lazy dog.</div>
+</code></pre>
+			</section>			
+			<section>
+				<h2>Recap</h2>
+				<ul>
+					<li style="font-size: 28px;" class="fragment"><strong><span style="color:yellow;">What is a Framework?</span></strong> A component/widget library</li>
+					<li style="font-size: 28px;" class="fragment"><strong><span style="color:yellow;">Why a Framework?</span></strong> Saves time and money, consisent user interface, plug and play, built in accessibility</li>
+					<li style="font-size: 28px;" class="fragment"><strong><span style="color:yellow;">How to Create a Framework?</span></strong> Assemble UX team, compile list of components, define business needs, requirements/parameters, functions, appearance, content, a11y, keep up with tech changes</li>
+					<li style="font-size: 28px;" class="fragment"><strong><span style="color:yellow;">Who is on UX team?</span></strong> Researcher, visual designer, interaction designer, content, a11y SME, developer (sometimes people wear more than one hat)</li>
+				</ul>		
+			</section>	
             <section>
                 <h2>Resources</h2>
                 <ul>
