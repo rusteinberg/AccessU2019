@@ -152,7 +152,7 @@
                 </div>
             </section>
 
-            <section id="fragments">
+            <section class="fragments">
                 <h2>What did you find?</h2>
                 <ul class="fragment">
                     <li style="font-size: 28px;">Unused rows and columns hidden</li>
@@ -245,7 +245,7 @@
                             <li>The font was changed to Arial and bumped up to size 12.</li>
                             <li>The color contrast was fixed on the headers. </li>
                         </ul>
-                        <p>You will probably agree that these changes have made the table much more readable for anyone, not just thse with visual impairments.</p>
+                        <p>You will probably agree that these changes have made the table much more readable for anyone, not just those with visual impairments.</p>
                 </aside>
             </section>
             <section>
@@ -292,9 +292,9 @@
                             <h2>How Can This Table Be Simplified?</h2></div>
                     </div>
                 </div>
-                <p><small>Picture below is a link that opens file in MS Excel</small></p>
+                <p><small> <a href="exercises/02-table-before.xlsx">Link to Before example MS Excel</a></small></p>
                 <p>
-                    <a href="exercises/02-table-before.xlsx"><img src="images/table-before.png" alt="example of table that needs to be simplified"></a>
+                   <img src="images/table-before.png" alt="example of table that needs to be simplified">
                 </p>
             </section>
 
@@ -306,9 +306,9 @@
                             <h2>How Can This Table Be Simplified? Solved.</h2></div>
                     </div>
                 </div>
-                <p><small>Picture below is a link that opens file in MS Excel</small></p>
+                <p><small><a href="exercises/02-table-after.xlsx">Link to After example MS Excel</a></small></p>
                 <p>
-                    <a href="exercises/02-table-after.xlsx"><img src="images/table-after.png" alt="example of table that has been simplified"></a>
+                   <img src="images/table-after.png" alt="example of table that has been simplified">
             </section>
 
             <section>
@@ -330,7 +330,7 @@
                     <p>Tables are difficult for screen reader users to navigate whether they appear on a web page, a Word document, a PDF, a PowerPoint, and yes in Excel.</p>
                     <p>The main issue is screen reader users need to be able to associate column and row headers with the cell they are in.</p>
                     <p>It's Ok to have merged cells above data. But if a table has table headers with merged cells, it is difficult if not impossible for screen reader users to know where they are.</p>
-                    <p>Although Excel has a way of defining a top row as a header row, that information is not communicated to all screen reader users. Demo on JAWS.</p>
+                    <p>Although Excel has a way of defining a top row as a header row, that information is not communicated to all screen reader users. </p>
                 </aside>
             </section>
 
@@ -351,7 +351,7 @@
                     <li style="font-size: 24px;"><a href="exercises/03-Named-Cells-before.xlsx">Download before practice Excel file</a>. In practice file, we'll start Sheet 1, 1. Contact List</li>
                     <li style="font-size: 24px;"><a href="exercises/03-Named-Cells-after.xlsx">Download after practice Excel file</a> to compare.</li>
                 </ul>
-            </section>
+			</section>
 
             <section>
                 <div style="display:table;">
@@ -369,7 +369,7 @@
                     <img class="fragment" src="images/04-column-name.png" width="640" style="position:absolute;top:0;left:0;" alt="Step 4 Select OK button, then Close button for Name Manager" />
                 </div>
                 <aside class="notes">
-                    <ol>
+			        <ol>
                         <li>Examine table to determine starting cell of column headers</li>
                         <li>Select starting cell (in example it is A2)</li>
                         <li>Go to Formulas tab, then Name Manager, then New (keyboard shortcut Control+F3)</li>
@@ -568,7 +568,7 @@
                 </div>
                 <aside class="notes">
                     <p>Keep in mind that some of your Excel-generated charts and graphs may also be used for presentations in small to large groups. Having said that, make sure that associate a number with each bar in your graph along with the name.</p>
-                    <p>Checked preloaded palettes for pie charts in Excel 2013 and none pass for accessibility with black or white characters.</p>
+                    <p>Checked preloaded palettes for pie charts in Excel 2016 and none pass for accessibility with black or white characters.</p>
                 </aside>
             </section>
 			
@@ -604,10 +604,10 @@
                 <table>
                     <thead>
                         <tr>
-                            <th scope="col"><a href="exercises/04-Before.xlsx"><small>Before
+                            <th scope="col"><a href="exercises/04-Charts-Before.xlsx"><small>Before
 								Remediation</small></a></th>
 
-                            <th scope="col"><a href="exercises/04-After.xlsx"><small>After
+                            <th scope="col"><a href="exercises/04-Charts-After.xlsx"><small>After
 								Remediation</small></a></th>
                         </tr>
                     </thead>
@@ -630,6 +630,7 @@
 				<li>Office 365 has an auto alt text generator that uses artificial intelligence to describe your picture. To turn it off: Select File > Options > Ease of Access. In the Automatic Alt Text section, select or unselect the Automatically generate alt text for me option, and then select OK.</li>
 				<li>In addition, if your artwork is decorative, in Office 365 and Office 2019 you can mark it as decorative.</li>
 				<li>If it is decorative in Office 2016, type a pair of quotation marks ("") or a space in the alt text field</li>
+				<li>Charts and graphs are on a separate layer. This means it is difficult for screen reader users to associate the pictures with data.</li>
 				</ul>
 				</aside>
             </section>
@@ -637,19 +638,48 @@
                 <h2>Before and After Chart 1</h2>
 
                 <div style="position:relative; width:912px; height:596px; margin:0 auto;">
-                    <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/04-Before-1.png" alt="table before remediation" style="position:absolute;top:0;left:0;" /> <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/04-After-1.png" alt="table after remediation" style="position:absolute;top:0;left:0;" /></div>
+                    <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/04-Before-1.png" alt="table before remediation" style="position:absolute;top:0;left:0;" />
+					<img class="fragment fade-in" data-fragment-index="0" width="912" src="images/04-After-1.png" alt="table after remediation" style="position:absolute;top:0;left:0;" />
+				</div>
+				<aside class="notes">
+				<ul>
+					<li>After examples have information typed into A1 that is covered by charts. This information explains what is contained on a particular sheet</li>
+					<li>After examples have alt text for pictures</li>
+					<li>After examples also have a cell A2 that is a long description of chart</li>
+					<li>After examples have associated data tables under the pictures</li>
+					<li>After example on Sheet 3 has associated data table on a separate sheet</li>
+				</ul>
+			</aside>
             </section>
             <section>
                 <h2>Before and After Chart 2</h2>
 
                 <div style="position:relative; width:912px; height:596px; margin:0 auto;">
                     <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/04-Before-2.png" alt="table before remediation" style="position:absolute;top:0;left:0;" /> <img class="fragment fade-in" data-fragment-index="0" height="460" src="images/04-After-2.png" alt="table after remediation" style="position:absolute;top:0;left:0;" /></div>
+				<aside class="notes">
+				<ul>
+					<li>After examples have information typed into A1 that is covered by charts. This information explains what is contained on a particular sheet</li>
+					<li>After examples have alt text for pictures</li>
+					<li>After examples also have a cell A2 that is a long description of chart</li>
+					<li>After examples have associated data tables under the pictures</li>
+					<li>After example on Sheet 3 has associated data table on a separate sheet</li>
+				</ul>
+				</aside>
             </section>
             <section>
                 <h2>Before and After Chart 3</h2>
 
                 <div style="position:relative; width:912px; height:596px; margin:0 auto;">
                     <img class="fragment fade-out" data-fragment-index="0" width="912" src="images/04-Before-3.png" alt="table before remediation" style="position:absolute;top:0;left:0;" /> <img class="fragment fade-in" data-fragment-index="0" width="912" src="images/04-After-3.png" alt="table after remediation" style="position:absolute;top:0;left:0;" /></div>
+				<aside class="notes">
+				<ul>
+					<li>After examples have information typed into A1 that is covered by charts. This information explains what is contained on a particular sheet</li>
+					<li>After examples have alt text for pictures</li>
+					<li>After examples also have a cell A2 that is a long description of chart</li>
+					<li>After examples have associated data tables under the pictures</li>
+					<li>After example on Sheet 3 has associated data table on a separate sheet</li>
+				</ul>
+				</aside>
             </section>
 			<section>
 			 <div style="display:table;">
